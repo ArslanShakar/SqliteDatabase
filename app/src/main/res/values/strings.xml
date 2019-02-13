@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SqliteDatabase</string>
+    <string name="password">Password</string>
+    <string name="user_name">User Name</string>
+    <string name="register">Register</string>
+    <string name="show_records">Show</string>
+    <string name="update">Update</string>
+    <string name="search">Search</string>
+    <string name="search_with_name">Search With Name OR Password</string>
+    <string-array name="sample_entries">
+        <item>Samle Item 1</item>
+        <item>Samle Item 2</item>
+        <item>Samle Item 3</item>
+        <item>Samle Item 4</item>
+    </string-array>
+</resources>
