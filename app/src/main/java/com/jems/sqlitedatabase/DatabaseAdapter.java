@@ -63,6 +63,7 @@ public class DatabaseAdapter {
             arrayList.add(data);
         }
 
+        cursor.close();
         database.close();
 
         return arrayList;
@@ -70,7 +71,7 @@ public class DatabaseAdapter {
 
     //////////////////////////  Search User Record  //////////////////////////
     public String searchRecord(String searchText) {
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder buffer = new StringBuilder();
         SQLiteDatabase database = helper.getReadableDatabase();
 
         String[] coloums = {DBHelper.UID, DBHelper.NAME};
@@ -88,6 +89,7 @@ public class DatabaseAdapter {
             buffer.append(id + " " + getName + "\n");
         }
 
+        cursor.close();
         database.close();
 
         // buffer.toString(); convert string buffer object to string
@@ -132,7 +134,7 @@ public class DatabaseAdapter {
     static class DBHelper extends SQLiteOpenHelper {
         private static final String DATABASE_NAME = "user_database";
         private static final String TABLE_NAME = "user_table";
-        private static final int DATABASE_VERSION = 3;
+        private static final int DATABASE_VERSION = 4;
         private static final String UID = "_id";
         private static final String NAME = "name";
         private static final String PASSWORD = "password";
