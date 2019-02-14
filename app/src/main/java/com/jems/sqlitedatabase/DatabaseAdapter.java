@@ -137,7 +137,8 @@ public class DatabaseAdapter {
         private static final String NAME = "name";
         private static final String PASSWORD = "password";
         private static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + " (" + UID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + NAME
-                + " VARCHAR(255) NOT NULL, " + PASSWORD + " VARCHAR(255))";
+                + " VARCHAR(255) NOT NULL, " + PASSWORD + " VARCHAR(255));";
+        /*THIS IS SQLITE SEMICOLEN ");" AND THAT IS OPTIONAL, & LAST SEMICOLON IS JAVA STATEMENT TERMINATOR SEMICOLON*/
         private static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
 
         private Context context;
